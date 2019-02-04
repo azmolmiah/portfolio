@@ -1,0 +1,176 @@
+/* Global*/
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: #fff;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgb(255, 99, 99);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgb(255, 99, 99);
+  border-color: #ff3838;
+}
+
+h1 {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h3 {
+  font-family: "Raleway", sans-serif;
+  color: #43464b;
+  margin-bottom: 7rem;
+}
+
+.my-button {
+  color: #fff;
+  border-radius: 0;
+  background: #ff3838;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0.2rem;
+}
+
+.my-button:hover {
+  color: #ff3838;
+  border-radius: 0;
+  background: #fff;
+  border: 1px solid #ff3838;
+  color: #ff3838;
+}
+
+/* Sections */
+section {
+  padding: 5rem 2rem;
+}
+
+section h1 {
+  margin-bottom: 2rem;
+}
+
+section p {
+  margin-bottom: 5rem;
+}
+
+#header-section h1::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #ff3838;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50px, -25px);
+}
+
+/* Header */
+#header-section {
+  background: #f8f8f8;
+}
+
+#header-section h3 {
+  color: #ff3838;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+}
+
+#header-section h1 {
+  font-weight: 900;
+  font-size: 4rem;
+}
+
+/* Project section */
+#project-section h3 {
+  font-size: 2.3rem;
+}
+
+/* Contact Section */
+#contact-section {
+  background: #ff3838;
+}
+
+#contact-section h3 {
+  color: #fff;
+  font-size: 2.3rem;
+}
+
+#contact-section h3::after {
+  background: #fff;
+}
+
+#contact-section form {
+  padding: 1.2rem 2rem;
+  background: #fff;
+
+  width: 100%;
+}
+
+#contact-section .form-control {
+  border-radius: 0;
+  margin-bottom: 1rem;
+  border: 1px solid #e0e4e7;
+}
+
+#contact-section button {
+  width: 100%;
+}
+
+/* footer section */
+#footer-section {
+  border-top: 0.5px solid rgb(255, 99, 99);
+  background: #ff3838;
+  color: #fff;
+  overflow: auto;
+}
+
+#footer-section h3 {
+  color: #fff;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+}
+
+#footer-section .col-sm-6:last-child i:nth-child(3) {
+  margin: 0 0.5rem;
+}
+
+#footer-section span {
+  font-weight: 100;
+  font-size: 14px;
+  letter-spacing: 2px;
+}
+
+#footer-section .social-media {
+  position: absolute;
+  right: 0;
+}
+
+#footer-section a:hover {
+  color: #fff;
+  /* Make shadow */
+}
+
+/* Media Queries */
+@media (max-width: 575.98px) {
+  #header-section h1 {
+    font-weight: 900;
+    font-size: 3rem;
+  }
+  h3 {
+    margin-bottom: 4rem;
+  }
+  section {
+    padding: 3.5rem 1rem;
+  }
+  section p {
+    margin-bottom: 2.5rem;
+  }
+}
