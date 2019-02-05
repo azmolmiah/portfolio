@@ -1,5 +1,7 @@
-let message;
-let messageClass;
+let nameAlert = document.getElementById("name");
+let emailAlert = document.getElementById("email");
+let messageAlert = document.getElementById("message");
+let messageClass = "alert alert-danger";
 
 function validateForm() {
   let name = document.forms["myForm"]["name"].value;
@@ -7,9 +9,13 @@ function validateForm() {
   let message = document.forms["myForm"]["message"].value;
 
   if (name == "" || email == "" || message == "") {
-    document.getElementById("name").innerText = "Name must be filled out";
-    document.getElementById("email").innerText = "Email must be filled out";
-    document.getElementById("message").innerText = "Message must be filled out";
+    nameAlert.innerText = "Name must be filled out";
+    emailAlert.innerText = "Email must be filled out";
+    messageAlert.innerText = "Message must be filled out";
+
+    nameAlert.classList.add(`${messageClass}`);
+    emailAlert.classList.add(`${messageClass}`);
+    messageAlert.classList.add(`${messageClass}`);
 
     return false;
   }
