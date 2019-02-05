@@ -18,5 +18,7 @@ function validateForm() {
     messageAlert.classList.add(`${messageClass}`);
 
     return false;
+  } else {
+    return true;
   }
 }
