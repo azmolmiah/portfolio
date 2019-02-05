@@ -138,6 +138,14 @@ section p {
   letter-spacing: 0.5rem;
 }
 
+#footer-section .col-sm-6:last-child {
+  float: right;
+}
+
+#footer-section .col-sm-6:first-child {
+  float: left;
+}
+
 #footer-section .col-sm-6:last-child i:nth-child(3) {
   margin: 0 0.5rem;
 }
@@ -149,8 +157,7 @@ section p {
 }
 
 #footer-section .social-media {
-  position: absolute;
-  right: 0;
+  margin-left: 82.5%;
 }
 
 #footer-section a:hover {
@@ -172,5 +179,14 @@ section p {
   }
   section p {
     margin-bottom: 2.5rem;
+  }
+  #footer-section h3,
+  #footer-section p {
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #footer-section .social-media {
+    margin: 1.2rem 0 1.2rem 39%;
   }
 }
