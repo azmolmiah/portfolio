@@ -62,33 +62,30 @@
       <div class="container">
         <h3 class="text-center">Contact me with this form</h3>
         <div class="row">
-          <form
-            id="myForm"
-            onsubmit="return validateForm()"
-            action="POST"
-            name="Portfolio"
-            data-netlify="true"
-          >
+          <form id="myForm" action="POST" name="Portfolio" data-netlify="true">
             <div class="form-group">
-              <div id="name"></div>
+              <div id="nameAlert"></div>
               <label>Name</label>
               <input
+                id="name"
                 type="text"
                 name="name"
                 class="form-control"
                 placeholder="Enter name here..."
               />
-              <div id="email"></div>
+              <div id="emailAlert"></div>
               <label>Email</label>
               <input
+                id="email"
                 type="email"
                 name="email"
                 class="form-control"
                 placeholder="Enter email here..."
               />
-              <div id="message"></div>
-              <label id="message">Message</label>
+              <div id="messageAlert"></div>
+              <label>Message</label>
               <textarea
+                id="message"
                 name="message"
                 cols="30"
                 rows="10"

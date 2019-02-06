@@ -1,23 +1,14 @@
-let nameAlert = document.getElementById("name");
-let emailAlert = document.getElementById("email");
-let messageAlert = document.getElementById("message");
-let messageClass = "alert alert-danger";
+document.getElementById("myForm").addEventListener("submit", validate);
 
-let name = document.forms["myForm"]["name"].value;
-let email = document.forms["myForm"]["email"].value;
-let message = document.forms["myForm"]["message"].value;
+function validate(e) {
+  // Get value from form
+  const name = document.forms["myForm"]["name"].value;
+  const email = document.forms["myForm"]["email"].value;
+  const message = document.forms["myForm"]["message"].value;
 
-function validateForm() {
-  if (name === "" && email === "" && message === "") {
-    // nameAlert.innerText = "Name must be filled out";
-    // emailAlert.innerText = "Email must be filled out";
-    // messageAlert.innerText = "Message must be filled out";
-
-    // nameAlert.classList.add(`${messageClass}`);
-    // emailAlert.classList.add(`${messageClass}`);
-    // messageAlert.classList.add(`${messageClass}`);
-
-    alert("Notworking");
-    return false;
+  if (name == "" && email == "" && message == "") {
+    alert("Please fill in all input");
+    e.preventDefault();
   }
+  // return true;
 }
