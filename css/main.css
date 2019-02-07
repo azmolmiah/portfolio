@@ -121,6 +121,7 @@ section h3 {
 }
 
 #header-section h3 {
+  margin-top: 2.5rem;
   color: #ff3838;
   font-weight: 600;
   letter-spacing: 0.5rem;
