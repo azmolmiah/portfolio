@@ -6,9 +6,26 @@ function validate(e) {
   const email = document.forms["myForm"]["email"].value;
   const message = document.forms["myForm"]["message"].value;
 
-  if (name == "" && email == "" && message == "") {
-    alert("Please fill in all input");
+  var regex = name.exec(/^$|\d/);
+
+  if (name == regex && email == "" && message == "") {
+    alert("Please fill in all fields");
     e.preventDefault();
   }
   // return true;
+}
+
+// Open and Close Side Menu
+document.getElementById("openClick").addEventListener("click", openSideMenu);
+let sideMenu = false;
+function openSideMenu(e) {
+  if (sideMenu == false) {
+    sideMenu = true;
+    document.getElementById("side-menu").style.width = "250px";
+    document.getElementById("main").style.marginLeft = "250px";
+    e.preventDefault();
+  } else {
+    document.getElementById("side-menu").style.width = "0px";
+    document.getElementById("main").style.marginLeft = "0px";
+  }
 }

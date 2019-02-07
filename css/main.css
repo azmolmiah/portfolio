@@ -47,6 +47,12 @@ h3 {
   color: #ff3838;
 }
 
+.mynavbar {
+  padding: 2.5rem 0 0 2.5rem;
+  position: fixed;
+  z-index: 1;
+}
+
 /* Sections */
 section {
   padding: 5rem 2rem;
@@ -60,18 +66,50 @@ section p {
   margin-bottom: 5rem;
 }
 
+section h3 {
+  font-size: 2.3rem;
+}
+
+/* Side Bar */
+
+.side-nav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  background: #000;
+  top: 0;
+  left: 0;
+  overflow-x: hidden;
+  padding-top: 7rem;
+  transition: 0.7s;
+}
+
+.side-nav li,
+.side-nav li a {
+  padding: 0 1rem 1rem 1.3rem;
+  text-decoration: none;
+  list-style: none;
+  text-transform: uppercase;
+  font-weight: 500;
+  letter-spacing: 0.3rem;
+}
+
+.side-nav li a:hover {
+  color: #ff3838;
+}
+
+/* Header */
 #header-section h1::before {
   content: "";
   display: block;
   width: 80px;
   height: 2px;
   background: #ff3838;
-  position: absolute;
+  position: relative;
   left: 50%;
   transform: translate(-50px, -25px);
 }
 
-/* Header */
 #header-section {
   background: #f8f8f8;
 }
@@ -88,8 +126,10 @@ section p {
 }
 
 /* Project section */
-#project-section h3 {
-  font-size: 2.3rem;
+
+/* Services Section */
+#services-section {
+  background: #f8f8f8;
 }
 
 /* Contact Section */
