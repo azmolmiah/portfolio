@@ -21,11 +21,10 @@ let sideMenu = false;
 function openSideMenu(e) {
   if (sideMenu == false) {
     sideMenu = true;
-    document.getElementById("side-menu").style.width = "250px";
-    document.getElementById("main").style.marginLeft = "250px";
+    document.getElementById("side-menu").style.width = "15rem";
+    document.getElementById("main").style.marginLeft = "15rem";
     e.preventDefault();
   } else {
-    document.getElementById("side-menu").style.width = "0px";
-    document.getElementById("main").style.marginLeft = "0px";
+    document.getElementById("side-menu").style.width = "0";
   }
 }

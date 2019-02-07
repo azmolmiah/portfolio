@@ -81,7 +81,7 @@ section h3 {
   left: 0;
   overflow-x: hidden;
   padding-top: 7rem;
-  transition: 0.7s;
+  transition: width 0.7s;
 }
 
 .side-nav li,
@@ -96,6 +96,12 @@ section h3 {
 
 .side-nav li a:hover {
   color: #ff3838;
+}
+
+#main {
+  transition: margin-left 0.5s;
+  position: absolute;
+  width: 100%;
 }
 
 /* Header */
