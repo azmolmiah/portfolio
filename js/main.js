@@ -6,9 +6,7 @@ function validate(e) {
   const email = document.forms["myForm"]["email"].value;
   const message = document.forms["myForm"]["message"].value;
 
-  var regex = name.exec(/^$|\d/);
-
-  if (name == regex && email == "" && message == "") {
+  if (name == "" && email == "" && message == "") {
     alert("Please fill in all fields");
     e.preventDefault();
   }
@@ -19,12 +17,16 @@ function validate(e) {
 document.getElementById("openClick").addEventListener("click", openSideMenu);
 let sideMenu = false;
 function openSideMenu(e) {
-  if (sideMenu == false) {
+  if (!sideMenu) {
     sideMenu = true;
     document.getElementById("side-menu").style.width = "15rem";
     document.getElementById("main").style.marginLeft = "15rem";
+    document.querySelector(".menuBtn").classList.add("closeBtn");
+
     e.preventDefault();
   } else {
     document.getElementById("side-menu").style.width = "0";
+    document.querySelector(".menuBtn").classList.remove("close");
   }
+  return true;
 }

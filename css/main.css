@@ -2,6 +2,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 a {
@@ -48,9 +49,46 @@ h3 {
 }
 
 .mynavbar {
-  padding: 2.5rem 0 0 2.5rem;
+  top: 2rem;
+  left: 3rem;
   position: fixed;
-  z-index: 1;
+  z-index: 3;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.btn-line {
+  width: 28px;
+  height: 3px;
+  margin: 0 0 5px 0;
+  background: #ff3838;
+  transition: 0.5s;
+}
+
+.close {
+  display: none;
+  transform: rotate(180deg);
+  transition: 0.5s;
+}
+
+.closeBtn .btn-line:nth-child(1) {
+  width: 28px;
+  margin: 0 0 5px 0;
+  background: #ff3838;
+  transition: 0.5s;
+  transform: rotate(45deg) translate(-1px, -1px);
+}
+
+.closeBtn .btn-line:nth-child(2) {
+  display: none;
+}
+
+.closeBtn .btn-line:nth-child(3) {
+  width: 28px;
+  margin: 0 0 5px 0;
+  background: #ff3838;
+  transition: 0.5s;
+  transform: rotate(-45deg) translate(7px, -6px);
 }
 
 /* Sections */
@@ -71,7 +109,6 @@ section h3 {
 }
 
 /* Side Bar */
-
 .side-nav {
   height: 100%;
   width: 0;
