@@ -186,6 +186,29 @@ section h3 {
   border-bottom: 0.5px solid rgb(226, 210, 210);
 }
 /* Services Section */
+#services-section .card-title {
+  border-bottom: 0.5px solid rgb(226, 210, 210);
+}
+
+#services-section {
+  background: rgb(128, 0, 0);
+  background: linear-gradient(
+    90deg,
+    rgba(128, 0, 0, 1) 0%,
+    rgba(195, 14, 14, 1) 35%,
+    rgba(255, 56, 56, 1) 100%
+  );
+}
+
+#services-section .card-body {
+  background: #fff;
+}
+
+#services-section h1 {
+  padding-bottom: 1rem;
+}
+
+/* Skills Section */
 #skills-section {
   background: #f8f8f8;
   padding: 4rem 2rem 0 2rem !important;
