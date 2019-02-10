@@ -1,5 +1,7 @@
 /* Global*/
-
+* {
+  border-radius: 0 !important;
+}
 html {
   scroll-behavior: smooth;
   overflow-x: hidden;
@@ -91,6 +93,16 @@ h3 {
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
+.shadow {
+  -webkit-box-shadow: 0 10px 6px -6px rgb(88, 88, 88);
+  -moz-box-shadow: 0 10px 6px -6px rgb(88, 88, 88);
+  box-shadow: 0 12px 8px -8px rgb(88, 88, 88);
+}
+
+.output {
+  transition: ease-in 0.5ms;
+}
+
 /* Sections */
 section {
   padding: 5rem 2rem;
@@ -170,10 +182,13 @@ section h3 {
 }
 
 /* Project section */
-
+#project-section {
+  border-bottom: 0.5px solid rgb(226, 210, 210);
+}
 /* Services Section */
-#services-section {
+#skills-section {
   background: #f8f8f8;
+  padding: 4rem 2rem 0 2rem !important;
 }
 
 /* Contact Section */
@@ -263,6 +278,10 @@ section h3 {
   }
   section p {
     margin-bottom: 2.5rem;
+  }
+  #skills-section .col-sm-3,
+  #skills-section .col-sm-9 {
+    text-align: center !important;
   }
   #footer-section h3,
   #footer-section p {
