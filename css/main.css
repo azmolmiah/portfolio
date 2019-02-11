@@ -120,6 +120,15 @@ section h3 {
   font-size: 2.3rem;
 }
 
+.transition-up:hover {
+  position: relative;
+  transform: translate(0px, -25px);
+  transition: ease-in 0.3s;
+  -webkit-box-shadow: 0 10px 6px -6px rgb(22, 22, 22);
+  -moz-box-shadow: 0 10px 6px -6px rgb(22, 22, 22);
+  box-shadow: 0 12px 8px -8px rgb(22, 22, 22);
+}
+
 /* Side Bar */
 .side-nav {
   height: 100%;
@@ -202,10 +211,15 @@ section h3 {
 
 #services-section .card-body {
   background: #fff;
+  transition: ease-out 0.3s;
 }
 
 #services-section h1 {
   padding-bottom: 1rem;
+}
+
+#services-section h3 {
+  color: #fff;
 }
 
 /* Skills Section */
@@ -231,7 +245,7 @@ section h3 {
 #contact-section form {
   padding: 1.2rem 2rem;
   background: #fff;
-
+  transition: ease-in 0.3s;
   width: 100%;
 }
 
