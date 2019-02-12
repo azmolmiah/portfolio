@@ -200,13 +200,7 @@ section h3 {
 }
 
 #services-section {
-  background: rgb(128, 0, 0);
-  background: linear-gradient(
-    90deg,
-    rgba(128, 0, 0, 1) 0%,
-    rgba(195, 14, 14, 1) 35%,
-    rgba(255, 56, 56, 1) 100%
-  );
+  background: #ff3838;
 }
 
 #services-section .card-body {
@@ -263,6 +257,7 @@ section h3 {
 #footer-section {
   border-top: 0.5px solid rgb(255, 99, 99);
   background: #ff3838;
+
   color: #fff;
   overflow: auto;
 }
@@ -330,6 +325,6 @@ section h3 {
   }
 
   #footer-section .social-media {
-    margin: 1.2rem 0 1.2rem 39%;
+    margin: 1.2rem 0 1.2rem 36.5%;
   }
 }
