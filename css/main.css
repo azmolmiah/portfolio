@@ -307,6 +307,9 @@ section h3 {
     font-weight: 900;
     font-size: 3rem;
   }
+  #header-section h3 {
+    font-size: 1.6rem;
+  }
   h3 {
     margin-bottom: 4rem;
   }
@@ -317,7 +320,7 @@ section h3 {
     margin-bottom: 2.5rem;
   }
   #skills-section .col-sm-3,
-  #skills-section .col-sm-9 {
+  #skills-section .col-sm-7 {
     text-align: center !important;
   }
   #footer-section h3,
