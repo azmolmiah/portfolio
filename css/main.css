@@ -56,7 +56,7 @@ h3 {
   position: fixed;
   z-index: 3;
   cursor: pointer;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .btn-line {
@@ -64,32 +64,33 @@ h3 {
   height: 3px;
   margin: 0 0 5px 0;
   background: #ff3838;
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .close {
   display: none;
   transform: rotate(180deg);
-  transition: 0.5s;
+  transition: 0.3s;
 }
 
 .closeBtn .btn-line:nth-child(1) {
   width: 28px;
   margin: 0 0 5px 0;
   background: #ff3838;
-  transition: 0.5s;
+  transition: 0.3s;
   transform: rotate(45deg) translate(-1px, -1px);
 }
 
 .closeBtn .btn-line:nth-child(2) {
   display: none;
+  transition: 0.3s;
 }
 
 .closeBtn .btn-line:nth-child(3) {
   width: 28px;
   margin: 0 0 5px 0;
   background: #ff3838;
-  transition: 0.5s;
+  transition: 0.3s;
   transform: rotate(-45deg) translate(7px, -6px);
 }
 
@@ -139,7 +140,7 @@ section h3 {
   left: 0;
   overflow-x: hidden;
   padding-top: 7rem;
-  transition: width 0.7s;
+  transition: width 0.3s;
 }
 
 .side-nav li,
@@ -151,6 +152,7 @@ section h3 {
   text-transform: uppercase;
   font-weight: 500;
   letter-spacing: 0.3rem;
+  transition: width 0.3s;
 }
 
 .side-nav a:hover {
@@ -158,7 +160,7 @@ section h3 {
 }
 
 #main {
-  transition: margin-left 0.5s;
+  transition: margin-left 0.3s;
   position: absolute;
   width: 100%;
 }
@@ -180,8 +182,8 @@ section h3 {
 }
 
 #header-section h3 {
-  margin-bottom: 7rem;
-  margin-top: 2.5rem;
+  margin-bottom: 6rem;
+  margin-top: 2rem;
   color: #ff3838;
   font-weight: 600;
   letter-spacing: 0.5rem;
@@ -196,13 +198,10 @@ section h3 {
 #project-section {
   border-bottom: 0.5px solid rgb(226, 210, 210);
 }
+
 /* Services Section */
 #services-section .card-title {
   border-bottom: 0.5px solid rgb(226, 210, 210);
-}
-
-#services-section {
-  background: #ff3838;
 }
 
 #services-section .card-body {
@@ -212,10 +211,6 @@ section h3 {
 
 #services-section h1 {
   padding-bottom: 1rem;
-}
-
-#services-section h3 {
-  color: #fff;
 }
 
 /* Skills Section */
