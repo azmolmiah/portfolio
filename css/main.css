@@ -21,11 +21,11 @@ a {
 }
 
 h1 {
-  font-family: "Noto Sans", sans-serif;
+  font-family: 'Noto Sans', sans-serif;
 }
 
 h3 {
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #43464b;
   margin-bottom: 2rem;
 }
@@ -167,7 +167,7 @@ section h3 {
 
 /* Header */
 #header-section h1::before {
-  content: "";
+  content: '';
   display: block;
   width: 80px;
   height: 2px;
@@ -292,7 +292,7 @@ section h3 {
   color: #fff;
 }
 #footer-section .footer-links {
-  margin-left: 51.4%;
+  margin-left: 69.4%;
 }
 
 /* Media Queries */
