@@ -44,8 +44,7 @@ function changeLogo() {
     "database",
     "express",
     "react",
-    "node-js",
-    "wordpress-simple"
+    "node-js"
   ];
 
   let texts = [
@@ -58,8 +57,7 @@ function changeLogo() {
     `I use this to get more out of MONGODB for better styling performance. One of the great benefits of using a CSS pre-processor. Has a bit more dynamic programming capabilities. Easy, powerful, and useful.`,
     `I use this to get more out of EXPRESS.JS for better styling performance. One of the great benefits of using a CSS pre-processor. Has a bit more dynamic programming capabilities. Easy, powerful, and useful.`,
     `I use this to get more out of REACT.JS for better styling performance. One of the great benefits of using a CSS pre-processor. Has a bit more dynamic programming capabilities. Easy, powerful, and useful.`,
-    `I use this to get more out of NODE.JS for better styling performance. One of the great benefits of using a CSS pre-processor. Has a bit more dynamic programming capabilities. Easy, powerful, and useful.`,
-    `I use this to get more out of Wordpress for better styling performance. One of the great benefits of using a CSS pre-processor. Has a bit more dynamic programming capabilities. Easy, powerful, and useful.`
+    `I use this to get more out of NODE.JS for better styling performance. One of the great benefits of using a CSS pre-processor. Has a bit more dynamic programming capabilities. Easy, powerful, and useful.`
   ];
 
   if (i == skills.length - 1) {
