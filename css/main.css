@@ -310,6 +310,10 @@ section h3 {
   letter-spacing: 2px;
 }
 
+#footer .social-media a:hover {
+  color: #6e6e6e;
+}
+
 #footer a:hover {
   color: #fff;
 }
