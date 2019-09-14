@@ -193,7 +193,7 @@ section h3 {
 }
 
 /* Project section */
-#project {
+#projects {
   border-bottom: 0.5px solid rgb(226, 210, 210);
 }
 
@@ -277,10 +277,6 @@ section h3 {
 
 #footer .col-sm-6:first-child {
   float: left;
-}
-
-#footer .col-sm-6:last-child i:nth-child(3) {
-  margin: 0 0.5rem;
 }
 
 #footer span {
