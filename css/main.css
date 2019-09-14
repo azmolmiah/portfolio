@@ -259,7 +259,6 @@ section h3 {
 #footer {
   border-top: 0.5px solid rgb(255, 99, 99);
   background: #ff3838;
-
   color: #fff;
   overflow: auto;
 }
@@ -285,15 +284,8 @@ section h3 {
   letter-spacing: 2px;
 }
 
-#footer .social-media {
-  margin-left: 76.5%;
-}
-
 #footer a:hover {
   color: #fff;
-}
-#footer .footer-links {
-  margin-left: 69.4%;
 }
 
 /* Media Queries */
