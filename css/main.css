@@ -167,11 +167,11 @@ section h3 {
   background: #ff3838;
   position: relative;
   left: 50%;
-  transform: translate(-50px, -100px);
+  transform: translate(-45px, -100px);
 }
 
 #header {
-  background: #f8f8f8;
+  background: #e2e2e2;
 }
 
 #header h3 {
@@ -188,7 +188,7 @@ section h3 {
 }
 
 #header .skills {
-  color: #8d8d8c;
+  color: #6e6e6e;
   margin-top: 4rem;
 }
 
@@ -199,6 +199,17 @@ section h3 {
 /* Project section */
 #projects {
   border-bottom: 0.5px solid rgb(226, 210, 210);
+}
+
+#projects h3::before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #ff3838;
+  position: relative;
+  left: 50%;
+  transform: translate(-40px, -10px);
 }
 
 .project-links {
@@ -231,6 +242,17 @@ section h3 {
 /* Contact Section */
 #contact {
   background: #ff3838;
+}
+
+#contact h3::before {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 2px;
+  background: #fff;
+  position: relative;
+  left: 50%;
+  transform: translate(-40px, -10px);
 }
 
 #contact h3 {
