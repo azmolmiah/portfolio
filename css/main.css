@@ -312,9 +312,11 @@ section h3 {
   #footer .footer-links {
     margin: 0 auto !important;
     text-align: center;
+    float: none !important;
   }
 
   #footer .social-media {
-    margin: 1.2rem 0 1.2rem 36.5%;
+    margin: 1.2rem 0 1.2rem 38.5%;
+    float: none !important;
   }
 }

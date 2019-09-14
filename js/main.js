@@ -27,5 +27,7 @@ function openSideMenu(e) {
     document.getElementById('side-menu').style.width = '0';
     document.getElementById('main').style.marginLeft = '0';
     document.querySelector('.menuBtn').classList.remove('closeBtn');
+    sideMenu = false;
+    e.preventDefault();
   }
 }
