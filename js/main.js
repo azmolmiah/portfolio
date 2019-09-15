@@ -20,6 +20,7 @@ function openSideMenu(e) {
   if (!sideMenu) {
     sideMenu = true;
     document.getElementById('side-menu').style.width = '15rem';
+    document.getElementById('side-menu').style.position = 'fixed';
     document.getElementById('main').style.marginLeft = '15rem';
     document.querySelector('.menuBtn').classList.add('closeBtn');
     e.preventDefault();
