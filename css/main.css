@@ -327,13 +327,21 @@ section h3 {
     font-size: 1.6rem;
   }
   h3 {
-    margin-bottom: 4rem;
+    margin: 3rem 0 4rem 0;
   }
   section {
     padding: 3.5rem 1rem;
   }
   section p {
     margin-bottom: 2.5rem;
+  }
+
+  .skills i {
+    font-size: 3rem;
+  }
+
+  .skills {
+    margin-top: 0.1rem !important;
   }
 
   #footer h3,
