@@ -106,8 +106,8 @@
           <h1>Front-End Developer</h1>
 
           <p class="lead mt-3">
-            Front-End developer, based in Manchester and learning to code since
-            2016.
+            Front-End developer, based in Manchester and learning to programme
+            since 2016.
             <br />
             Experienced in using HTML, CSS, Javascript, React, Node.js, MERN
             stack.
@@ -142,6 +142,24 @@
                     This is the first version, my first project that I started
                     to understand more about programming in web development.
                   </p>
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th scope="col">Problems</th>
+                        <th scope="col">Solutions</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>Mark</td>
+                        <td>Otto</td>
+                      </tr>
+                      <tr>
+                        <td>Jacob</td>
+                        <td>Thornton</td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
                 <div class="project-links">
                   <a href="/">
@@ -307,47 +325,61 @@
       <section id="contact">
         <div class="container ">
           <h3 class="text-center">Contact me with this form</h3>
-          <div class="row">
-            <form
-              class="shadow transition-up"
-              id="myForm"
-              action="POST"
-              name="Portfolio"
-              data-netlify="true"
-            >
-              <div class="form-group">
-                <div id="nameAlert"></div>
-                <label>Name</label>
-                <input
-                  id="name"
-                  type="text"
-                  name="name"
-                  class="form-control"
-                  placeholder="Enter name here..."
-                />
-                <div id="emailAlert"></div>
-                <label>Email</label>
-                <input
-                  id="email"
-                  type="email"
-                  name="email"
-                  class="form-control"
-                  placeholder="Enter email here..."
-                />
-                <div id="messageAlert"></div>
-                <label>Message</label>
-                <textarea
-                  id="message"
-                  name="message"
-                  cols="30"
-                  rows="10"
-                  class="form-control"
-                ></textarea>
+
+          <form
+            class="shadow transition-up"
+            id="myForm"
+            action="POST"
+            name="Portfolio"
+            data-netlify="true"
+          >
+            <div class="form-group">
+              <div class="row">
+                <div class="col-md-6">
+                  <div id="nameAlert"></div>
+                  <label>Name</label>
+                  <input
+                    id="name"
+                    type="text"
+                    name="name"
+                    class="form-control"
+                    placeholder="Enter full name here..."
+                  />
+                  <div id="emailAlert"></div>
+                  <label>Email</label>
+                  <input
+                    id="email"
+                    type="email"
+                    name="email"
+                    class="form-control"
+                    placeholder="Enter email address here..."
+                  />
+                  <div id="phoneAlert"></div>
+                  <label>Phone</label>
+                  <input
+                    id="phone"
+                    type="tel"
+                    name="phone"
+                    class="form-control"
+                    placeholder="Enter phone number here..."
+                  />
+                </div>
+                <div class="col-md-6">
+                  <div id="messageAlert"></div>
+                  <label>Message</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    cols="30"
+                    rows="8"
+                    class="form-control"
+                  ></textarea>
+                </div>
 
                 <button type="submit" class="btn my-button">Submit</button>
               </div>
-            </form>
-          </div>
+            </div>
+          </form>
         </div>
       </section>
       <section id="footer">
