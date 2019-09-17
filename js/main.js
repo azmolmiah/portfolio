@@ -32,3 +32,17 @@ function openSideMenu(e) {
     e.preventDefault();
   }
 }
+
+// Add active class
+let btns = document.getElementsByClassName('nav-item');
+
+for (let i = 0; i < btns.length; i++) {
+  btns[i].addEventListener('click', e => {
+    // console.log(e.target.parentElement.classList);
+    if (e.target.innerHTML === btns[i].children[0].innerHTML) {
+      e.target.parentElement.classList.add('active');
+      // console.log(btns[i].children[0].parentElement.parentElement.children[i]);
+    } else {
+    }
+  });
+}
