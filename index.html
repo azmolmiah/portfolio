@@ -25,7 +25,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="css/main.css" />
-    <title>Azmol Miah | Front-End Developer</title>
+    <title>Azmol Miah | Web Developer</title>
   </head>
 
   <body>
@@ -101,11 +101,11 @@
             <i class="fab fa-react fa-4x"></i>
             <i class="fab fa-node-js fa-4x"></i>
           </div>
-          <h1>Front-End Developer</h1>
+          <h1>Web Developer</h1>
 
           <p class="lead mb-5">
-            Front-End developer, based in Manchester and experienced in using
-            HTML, CSS, Javascript, React, Node.js.
+            Web developer, based in Manchester and experienced in using HTML,
+            CSS, Javascript, React, Node.js.
           </p>
           <a href="#projects"
             ><button type="button" class="btn my-button shadow">
@@ -128,7 +128,7 @@
                 <a href="/QawaidAppV1/index.html"
                   ><img
                     class="card-img-top"
-                    src="img/grey.svg"
+                    src="img/project-one.png"
                     alt="Card image cap"
                 /></a>
                 <div class="card-body">
@@ -155,11 +155,80 @@
                       </a>
                     </div>
                     <div class="col">
-                      <a href="!#">
-                        <div class="btn my-button">
+                      
+                        <div class="btn my-button"data-toggle="modal"
+                data-target="#projectOne">
                           Process
                         </div>
-                      </a>
+                      
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Project One Modal -->
+              <div
+                class="modal fade"
+                id="projectOne"
+                tabindex="-1"
+                role="dialog"
+                aria-labelledby="exampleModalLongTitle"
+                aria-hidden="true"
+              >
+                <div class="modal-dialog" role="document">
+                  <div class="modal-content">
+                    <div class="modal-header">
+                      <h5 class="modal-title" id="exampleModalLongTitle">
+                        Arabic Alphabet Vanilla JS
+                      </h5>
+                      <button
+                        type="button"
+                        class="close"
+                        data-dismiss="modal"
+                        aria-label="Close"
+                      >
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                    </div>
+                    <div class="modal-body text-left">
+                      <p>This is my very first project which I used to learn what it actually means to write your own code or apply code from tutorials to your own project. I decided for my first project I will make an interactive book which teaches you the Arabic Alphabet, as this looked appealing to me in the sense that it looked like it was something easy to design and I can focus more on learning Javascript fundamentals.</p>
+
+                      <h6>Features</h6>
+                      <ul >
+                        <li>One page Application</li>
+                        <li>Ajax request pages therefore no need for multiple html files</li>
+                        <li>Fixed Bottom Navigation</li>
+                        <li>Jump to specific pages using select options</li>
+                        <li>Listen to individual letter sounds by clicking on the letter</li>
+                        <li>Loop through the the all letters and sounds</li>
+                        <li>Bookmark pages</li>
+                      </ul>
+
+                      <h6>Steps</h6>
+                      <ol>
+                        <li>Learned JavaScript Fundamentals and DOM manipulations. </li>
+                        <li>Used Adobe Photoshop to design letters and IPhone 5 to record sounds.</li>
+                        <li>Designed the first page as a start with Bootstrap</li>
+                        <li>Studied Ajax crash course to use xhttp request. I didn’t want to have a lot of HTML pages. </li>
+                        <li>Studied JSON crash course to store the Name of the sounds and image names.</li>
+                        <li>I took the code form a gallery slider to help navigate requests between pages by incrementing/decrementing with index of the array from the JSON. </li>
+                        <li>Learned to apply select option to navigate to specific pages thus requesting the specified index number in the array which provided the paths to the Images.</li>
+                        <li>Added sound functionality </li>
+                        <li>Learned local storage to add bookmark </li>
+                      </ol>
+
+                      <h6>Problems and Solutions</h6>
+                      
+                    </div>
+                    <div class="modal-footer">
+                      <button
+                        type="button"
+                        class="btn btn-secondary"
+                        data-dismiss="modal"
+                      >
+                        Close
+                      </button>
+                      
                     </div>
                   </div>
                 </div>
@@ -169,7 +238,7 @@
               <div class="card shadow" style="width: 100%;">
                 <img
                   class="card-img-top"
-                  src="img/grey.svg"
+                  src="img/project-two.png"
                   alt="Card image cap"
                 />
                 <div class="card-body">
@@ -231,7 +300,9 @@
                       </a>
                     </div>
                     <div class="col">
-                      <a href="https://github.com/azmolmiah/arabic-alphabet-vReact">
+                      <a
+                        href="https://github.com/azmolmiah/arabic-alphabet-vReact"
+                      >
                         <div class="btn my-button">
                           Github
                         </div>
@@ -476,5 +547,15 @@
       </section>
     </div>
     <script src="js/main.js"></script>
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+      integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+      integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+      crossorigin="anonymous"
+    ></script>
   </body>
 </html>
