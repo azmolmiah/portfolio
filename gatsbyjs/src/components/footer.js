@@ -12,26 +12,32 @@ const Footer = () => {
             <p>&copy; 2019 by Azmol</p>
           </div>
           <div className="col-sm-6 mt-1" style={{ paddingRight: 0 }}>
-            <div className="social-media" style={{ float: "right" }}>
+            <div style={{ float: "right" }}>
               {/* <a to=""><i className="fab fa-youtube-square fa-2x"></i></a>  */}
-              <Link to="https://www.linkedin.com/in/azmol-miah-bb13b3164/">
-                <i className="fab fa-linkedin fa-2x"></i>
-              </Link>{" "}
-              <Link to="https://github.com/azmolmiah">
-                <i className="fab fa-github fa-2x"></i>
-              </Link>{" "}
-              <Link to="Azmol_Miah_Web_CV_2.pdf" target="_blank">
-                <i className="fas fa-file-alt fa-2x"></i>
-              </Link>
+              <a href="https://www.linkedin.com/in/azmol-miah-bb13b3164/">
+                <i className={`fab fa-linkedin fa-2x ${footerStyles.link}`}></i>
+              </a>{" "}
+              <a href="https://github.com/azmolmiah">
+                <i className={`fab fa-github fa-2x ${footerStyles.link}`}></i>
+              </a>{" "}
+              <a href="Azmol_Miah_Web_CV_2.pdf" target="_blank">
+                <i className={`fas fa-file-alt fa-2x ${footerStyles.link}`}></i>
+              </a>
             </div>
 
             <div className="clearfix"></div>
-            <div className="footer-links mt-4" style={{ float: "right" }}>
-              <a href="#header">Home</a>
+            <div className="mt-4" style={{ float: "right" }}>
+              <Link to="/#header" className={footerStyles.link}>
+                Home
+              </Link>
               <span> | </span>
-              <a href="#projects">Projects</a>
+              <Link to="/#projects" className={footerStyles.link}>
+                Projects
+              </Link>
               <span> | </span>
-              <a href="#contact">Contact</a>
+              <Link to="/#contact" className={footerStyles.link}>
+                Contact
+              </Link>
             </div>
           </div>
         </div>

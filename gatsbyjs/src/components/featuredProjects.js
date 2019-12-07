@@ -15,7 +15,7 @@ const featuredProjects = () => {
                 <img
                   className="card-img-top mb-3"
                   src="img/project-one.png"
-                  alt="Card image cap"
+                  alt="Card cap"
                 />
                 <h5>Arabic Alphabet Vanilla Version</h5>
                 <p className="card-text">
