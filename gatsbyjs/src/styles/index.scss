@@ -1,0 +1,49 @@
+* {
+  border-radius: 0 !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+a {
+  color: #fff;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgb(255, 99, 99);
+}
+
+.form-control:focus {
+  box-shadow: 0 0 0 0.2rem rgb(255, 99, 99);
+  border-color: #ff3838;
+}
+
+h1 {
+  font-family: "Noto Sans", sans-serif;
+}
+
+h3,
+.navbar-brand {
+  font-family: "Raleway", sans-serif;
+  color: #43464b;
+}
+
+.my-button {
+  color: #fff;
+  border-radius: 0;
+  background: #ff3838;
+  text-transform: uppercase;
+  line-height: 1.5em;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 40px;
+  letter-spacing: 0.2rem;
+}
+
+.my-button:hover {
+  color: #ff3838;
+  border-radius: 0;
+  background: #fff;
+}
