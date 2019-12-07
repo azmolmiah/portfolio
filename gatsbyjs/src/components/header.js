@@ -5,7 +5,6 @@ const Header = () => {
   return (
     <section id="header" className={headerStyles.header}>
       <div className="container text-center">
-        <h3>AZMOL MIAH</h3>
         <div className={`${headerStyles.skills} mt-5`}>
           <i className="fab fa-html5 fa-4x"></i>
           <i className="fab fa-css3-alt fa-4x"></i>

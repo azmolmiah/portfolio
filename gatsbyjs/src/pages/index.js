@@ -5,12 +5,14 @@ import Header from "../components/header"
 import FeatureProjects from "../components/featuredProjects"
 import Contact from "../components/contact"
 import Footer from "../components/footer"
+import Head from "../components/head"
 
 import "bootstrap/dist/css/bootstrap.min.css"
 import "../styles/index.scss"
 
 export default () => (
   <Fragment>
+    <Head />
     <Nav />
     <Header />
     <FeatureProjects />
