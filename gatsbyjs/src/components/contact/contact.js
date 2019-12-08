@@ -61,7 +61,7 @@ const Contact = () => {
 
               <button
                 type="submit"
-                className={`btn my-button mx-3 mt-4 btn-block ${contactStyles.button}`}
+                className={`btn my-button mx-3 mt-4 btn-block shadow ${contactStyles.button}`}
               >
                 Submit
               </button>
