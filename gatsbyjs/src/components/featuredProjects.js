@@ -1,7 +1,23 @@
 import React from "react"
+import { useStaticQuery, graphql } from "gatsby"
 import featuredProjectsStyles from "./featuredProjects.module.scss"
 
-const featuredProjects = () => {
+const FeaturedProjects = () => {
+  const data = useStaticQuery(graphql`
+    {
+      allContentfulFeatureProjects {
+        edges {
+          node {
+            id
+            title
+            excerpt
+            liveLink
+            githubLink
+          }
+        }
+      }
+    }
+  `)
   return (
     <div id="projects" className={featuredProjectsStyles.projects}>
       <div className="container text-center">
@@ -9,57 +25,56 @@ const featuredProjects = () => {
           Take a look at my projects
         </h3>
         <div className="row">
-          <div className="col-sm-4 mb-4">
-            <div className="card-shadow">
-              <div className="card-body">
-                <img
-                  className="card-img-top mb-3"
-                  src="img/project-one.png"
-                  alt="Card cap"
-                />
-                <h5>Arabic Alphabet Vanilla Version</h5>
-                <p className="card-text">
-                  This is the first version, my first project that I started to
-                  understand more about programming in web development.
-                </p>
-                <div className="project-links">
-                  <div className="row no-gutters">
-                    <div className="col">
-                      <a href="https://frosty-jennings-76acdd.netlify.com/">
+          {data.allContentfulFeatureProjects.edges.map(edge => (
+            <div className="col-sm-4 mb-4">
+              <div className="card shadow">
+                <div className="card-body">
+                  <img
+                    className="card-img-top mb-3"
+                    src="img/project-one.png"
+                    alt="Card cap"
+                  />
+                  <h5>{edge.node.title}</h5>
+                  <p className="card-text">{edge.node.excerpt}</p>
+                  <div className="project-links">
+                    <div className="row no-gutters">
+                      <div className="col">
+                        <a href={edge.node.liveLink}>
+                          <div
+                            className={`btn my-button ${featuredProjectsStyles.button}`}
+                          >
+                            Live
+                          </div>
+                        </a>
+                      </div>
+                      <div className="col">
+                        <a href={edge.node.githubLink}>
+                          <div
+                            className={`btn my-button ${featuredProjectsStyles.button}`}
+                          >
+                            Github
+                          </div>
+                        </a>
+                      </div>
+                      <div className="col">
                         <div
-                          className={`btn my-button ${featuredProjectsStyles.button}`}
+                          className="btn my-button"
+                          data-toggle="modal"
+                          data-target="#projectOne"
                         >
-                          Live
+                          Process
                         </div>
-                      </a>
-                    </div>
-                    <div className="col">
-                      <a href="https://github.com/azmolmiah/arabic-alphabet-v1">
-                        <div
-                          className={`btn my-button ${featuredProjectsStyles.button}`}
-                        >
-                          Github
-                        </div>
-                      </a>
-                    </div>
-                    <div className="col">
-                      <div
-                        className="btn my-button"
-                        data-toggle="modal"
-                        data-target="#projectOne"
-                      >
-                        Process
                       </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
   )
 }
 
-export default featuredProjects
+export default FeaturedProjects
