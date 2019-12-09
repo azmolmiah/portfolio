@@ -1,9 +1,17 @@
-import React from "react"
+import React, { useState } from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import featuredProjectsStyles from "./featuredProjects.module.scss"
-import FeatureProjectsModal from "./FeatureProjectsModal"
+import ProjectsModal from "./ProjectsModal"
 
 const FeaturedProjects = () => {
+  const [show, setShow] = useState(false)
+  const [modalId, setModalId] = useState(null)
+  const handleClose = () => setShow(false)
+  const handleShow = e => {
+    setShow(true)
+    setModalId(e.target.id)
+  }
+
   const data = useStaticQuery(graphql`
     {
       allContentfulFeatureProjects(sort: { fields: createdAt, order: ASC }) {
@@ -19,15 +27,11 @@ const FeaturedProjects = () => {
                 url
               }
             }
-            body {
-              json
-            }
           }
         }
       }
     }
   `)
-  console.log(data.allContentfulFeatureProjects.edges[0].node.id)
   return (
     <div id="projects" className={featuredProjectsStyles.projects}>
       <div className="container text-center">
@@ -68,16 +72,20 @@ const FeaturedProjects = () => {
                     <div className="col">
                       <div
                         className={`btn my-button shadow ${featuredProjectsStyles.button}`}
-                        data-toggle="modal"
-                        data-target={`#${edge.node.id}`}
+                        id={edge.node.id}
+                        onClick={handleShow}
                       >
                         Process
                       </div>
-                      <FeatureProjectsModal />
                     </div>
                   </div>
                 </div>
               </div>
+              <ProjectsModal
+                show={show}
+                handleClose={handleClose}
+                id={modalId}
+              />
             </div>
           ))}
         </div>
