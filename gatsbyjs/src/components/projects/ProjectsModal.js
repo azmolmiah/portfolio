@@ -21,29 +21,27 @@ const ProjectsModal = ({ show, handleClose, id }) => {
   `)
   return (
     <div>
-      {data.allContentfulFeatureProjects.edges.map(edge => {
-        if (edge.node.id === id) {
-          return (
-            <Modal
-              show={show}
-              onHide={handleClose}
-              key={edge.node.id}
-              style={{ overflowY: "scroll" }}
-            >
-              <Modal.Header closeButton>
-                <Modal.Title>{edge.node.title}</Modal.Title>
-              </Modal.Header>
-              <Modal.Body>
-                {documentToReactComponents(edge.node.body.json)}
-              </Modal.Body>
+      {data.allContentfulFeatureProjects.edges
+        .filter(edge => edge.node.id === id)
+        .map((edge, index) => (
+          <Modal
+            show={show}
+            onHide={handleClose}
+            key={index}
+            style={{ overflowY: "scroll" }}
+          >
+            <Modal.Header closeButton>
+              <Modal.Title>{edge.node.title}</Modal.Title>
+            </Modal.Header>
+            <Modal.Body>
+              {documentToReactComponents(edge.node.body.json)}
+            </Modal.Body>
 
-              <div onClick={handleClose} className="btn my-button shadow">
-                Close
-              </div>
-            </Modal>
-          )
-        }
-      })}
+            <div onClick={handleClose} className="btn my-button shadow">
+              Close
+            </div>
+          </Modal>
+        ))}
     </div>
   )
 }

@@ -1,47 +1,30 @@
-import React from "react"
-import { Link } from "gatsby"
+import React, { Fragment, useState, useEffect } from "react"
+import TopNav from "./nav/topNav"
+import SideNav from "./nav/sideNav"
 
 const Nav = () => {
-  return (
-    <nav className="desktop-nav navbar navbar-expand-md fixed-top navbar-dark bg-dark">
-      <div className="container">
-        <Link className="navbar-brand" to="/">
-          AZMOL MIAH
-        </Link>
+  const [nav, setNav] = useState(null)
 
-        <ul className="navbar-nav ml-auto">
-          <li className="nav-item">
-            <Link className="nav-link" to="/#header" activeClassName="active">
-              Home
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/#projects" activeClassName="active">
-              Projects
-            </Link>
-          </li>
-          <li className="nav-item">
-            <Link className="nav-link" to="/#contact" activeClassName="active">
-              Contact
-            </Link>
-          </li>
-          <li className="nav-item">
-            <a
-              className="nav-link"
-              href="https://www.linkedin.com/in/azmol-miah-bb13b3164/"
-            >
-              <i className="fab fa-linkedin"></i>
-            </a>
-          </li>
-          <li className="nav-item">
-            <a className="nav-link" href="https://github.com/azmolmiah">
-              <i className="fab fa-github"></i>
-            </a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  )
+  // When the component loads on each page
+  useEffect(() => {
+    if (window.innerWidth < 770) {
+      setNav(<SideNav />)
+    } else {
+      setNav(<TopNav />)
+    }
+    //eslint-disable-next-line
+  }, [])
+
+  // When the window is resize check if less than mobile / tablet size
+  window.onresize = () => {
+    if (window.innerWidth < 770) {
+      setNav(<SideNav />)
+    } else {
+      setNav(<TopNav />)
+    }
+  }
+
+  return <Fragment>{nav}</Fragment>
 }
 
 export default Nav
