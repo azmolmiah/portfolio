@@ -45,6 +45,7 @@ const Header = () => {
         </a>
         <a
           href={data.allContentfulHeader.edges[0].node.cv.file.url}
+          rel="noopener noreferrer"
           target="_blank"
         >
           <button type="button" className="btn my-button shadow">

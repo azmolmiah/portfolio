@@ -30,11 +30,11 @@ const SideNav = () => {
   }
   return (
     <Fragment>
-      <nav className={sideNavStyles.burgerMenuBtn} onClick={openSideMenu}>
+      <div className={sideNavStyles.burgerMenuBtn} onClick={openSideMenu}>
         <div className={lineOne}></div>
         <div className={lineTwo}></div>
         <div className={lineThree}></div>
-      </nav>
+      </div>
       <div
         className={sideNavStyles.sideNav}
         style={{ width: width, paddingLeft: padding }}
