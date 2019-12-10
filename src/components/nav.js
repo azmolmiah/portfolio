@@ -12,17 +12,17 @@ const Nav = () => {
     } else {
       setNav(<TopNav />)
     }
+
+    // When the window is resize check if less than mobile / tablet size
+    window.onresize = () => {
+      if (window.innerWidth < 770) {
+        setNav(<SideNav />)
+      } else {
+        setNav(<TopNav />)
+      }
+    }
     //eslint-disable-next-line
   }, [])
-
-  // When the window is resize check if less than mobile / tablet size
-  window.onresize = () => {
-    if (window.innerWidth < 770) {
-      setNav(<SideNav />)
-    } else {
-      setNav(<TopNav />)
-    }
-  }
 
   return <Fragment>{nav}</Fragment>
 }
