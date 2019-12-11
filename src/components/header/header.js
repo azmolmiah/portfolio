@@ -25,7 +25,13 @@ const Header = () => {
   `)
   return (
     <section id="header" className={headerStyles.header}>
-      <div className="container text-center">
+      <div
+        className="container text-center"
+        data-sal="slide-down"
+        data-sal-delay="300"
+        data-sal-duration="450"
+        data-sal-easing="ease"
+      >
         <div className={`${headerStyles.skills} mt-5`}>
           {data.allContentfulHeader.edges[0].node.icons.name.map(icon => (
             <i className={`fab ${icon} fa-4x mx-1`} key={icon}></i>
