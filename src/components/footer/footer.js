@@ -9,7 +9,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-sm-6" style={{ paddingLeft: 0 }}>
             <h3 className={footerStyles.title}>AZMOL MIAH</h3>
-            <p>&copy; 2019 by Azmol</p>
+            <p>&copy; 2019 by Azmol with Gatsbyjs &amp; Contentful</p>
           </div>
           <div className="col-sm-6 mt-1" style={{ paddingRight: 0 }}>
             <div style={{ float: "right" }}>
