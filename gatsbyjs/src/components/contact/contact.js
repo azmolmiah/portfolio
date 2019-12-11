@@ -24,7 +24,13 @@ const Contact = () => {
   } = useFormValidation(initialState, validateAuth)
   return (
     <section id="contact" className={contactStyles.contact}>
-      <div className="container ">
+      <div
+        className="container "
+        data-sal="slide-down"
+        data-sal-delay="300"
+        data-sal-duration="450"
+        data-sal-easing="ease"
+      >
         <h3 className={`text-center mb-5 ${contactStyles.title}`}>
           Contact me with this form
         </h3>

@@ -35,12 +35,25 @@ const FeaturedProjects = () => {
   return (
     <div id="projects" className={featuredProjectsStyles.projects}>
       <div className="container text-center">
-        <h3 className={`mb-5 ${featuredProjectsStyles.title}`}>
+        <h3
+          className={`mb-5 ${featuredProjectsStyles.title}`}
+          data-sal="fade"
+          data-sal-delay="300"
+          data-sal-duration="300"
+          data-sal-easing="ease"
+        >
           Take a look at my projects
         </h3>
         <div className="row">
-          {data.allContentfulFeatureProjects.edges.map(edge => (
-            <div className="col-sm-4 mb-4" key={edge.node.id}>
+          {data.allContentfulFeatureProjects.edges.map((edge, index) => (
+            <div
+              className="col-sm-4 mb-4"
+              key={edge.node.id}
+              data-sal="fade"
+              data-sal-delay={`${index + 1}00`}
+              data-sal-duration={`${index + 1}${index + 1 * 10}0`}
+              data-sal-easing="ease"
+            >
               <div className="card shadow">
                 <div className="card-body">
                   <img

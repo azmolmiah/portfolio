@@ -40,22 +40,31 @@ const SideNav = () => {
         style={{ width: width, paddingLeft: padding }}
       >
         <li className="mb-1">
-          <Link to="/#header">Home</Link>
+          <Link to="/#header">
+            <h6 className=" mr-2 mb-1 float-left font-weight-light">01</h6>
+            <h3 className="font-weight-light">Home</h3>
+          </Link>
         </li>
         <li className="mb-1">
-          <Link to="/#projects">Projects</Link>
+          <Link to="/#projects">
+            <h6 className=" mr-2 mb-1 float-left font-weight-light">02</h6>
+            <h3 className="font-weight-light">Projects</h3>
+          </Link>
         </li>
         {/* <li><a href="#">Blog</a></li>  */}
         <li className="mb-2">
-          <Link to="/#contact">Contact</Link>
+          <Link to="/#contact">
+            <h6 className="mr-2 mb-1 float-left font-weight-light">03</h6>
+            <h3 className="font-weight-light">Contact</h3>
+          </Link>
         </li>
-        <div className="social-media">
+        <div className="social-media mt-4">
           {/* <a href=""><i className="fab fa-youtube-square fa-2x"></i></a>  */}
           <a href="https://www.linkedin.com/in/azmol-miah-bb13b3164/">
-            <i className="fab fa-linkedin fa-2x mr-2"></i>
+            <i className="fab fa-linkedin fa-2x mr-4"></i>
           </a>
           <a href="https://github.com/azmolmiah">
-            <i className="fab fa-github fa-2x mr-2"></i>
+            <i className="fab fa-github fa-2x mr-4"></i>
           </a>
           <a href="Azmol_Miah_Web_CV_2.pdf" target="_blank">
             <i className="fas fa-file-alt fa-2x"></i>
