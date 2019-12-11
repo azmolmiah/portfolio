@@ -39,7 +39,7 @@ const TopNav = () => {
             </a>
           </li>
           <li className="nav-item">
-            <a className="nav-link" href="https://github.com/azmolmiah">
+            <a className="nav-link" href="/">
               <i className="fas fa-file-alt"></i>
             </a>
           </li>
