@@ -13,13 +13,13 @@ const useFormValidation = (initialState, validate) => {
       const noErrors = Object.keys(errors).length === 0
       if (noErrors) {
         console.log(
-          `Authenticated: ${values.name}, ${values.email}, ${values.message}`
+          `Authenticated: ${values.name}, ${values.email}, ${values.phone} ${values.message}`
         )
         //setOpen(true)
         fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: encode({ "form-name": "contact", ...values }),
+          body: encode({ "form-name": "portofolio", ...values }),
         })
           .then(() => console.log("Success!"))
           .catch(error => console.log(error))
@@ -29,13 +29,22 @@ const useFormValidation = (initialState, validate) => {
       } else {
         setSubmitting(false)
         setAlert("alert-danger")
-        setError(errors.name || errors.email || errors.message)
+        setError(errors.name || errors.email || errors.phone || errors.message)
       }
     }
-  }, [values, errors, isSubmitting, values.email, values.message, values.name])
+  }, [
+    values,
+    errors,
+    isSubmitting,
+    values.email,
+    values.message,
+    values.name,
+    values.phone,
+  ])
 
   const handleClose = () => {
     setShowAlert(false)
+    setValues(initialState)
   }
 
   const handleChange = e => {
@@ -43,13 +52,6 @@ const useFormValidation = (initialState, validate) => {
       ...values,
       [e.target.name]: e.target.value,
     })
-  }
-
-  const onBlur = () => {
-    const validationErrors = validate(values)
-    setErrors(validationErrors)
-    setShowAlert(true)
-    setSubmitting(true)
   }
 
   const encode = data => {
@@ -70,7 +72,6 @@ const useFormValidation = (initialState, validate) => {
     onSubmit,
     handleChange,
     values,
-    onBlur,
     error,
     isSubmitting,
     showAlert,

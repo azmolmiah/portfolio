@@ -7,6 +7,7 @@ import validateAuth from "./validateAuth"
 const initialState = {
   name: "",
   email: "",
+  phone: "",
   message: "",
 }
 
@@ -15,7 +16,6 @@ const Contact = () => {
     onSubmit,
     handleChange,
     values,
-    onBlur,
     isSubmitting,
     showAlert,
     error,
@@ -32,10 +32,11 @@ const Contact = () => {
         <form
           className={`shadow transition-up ${contactStyles.form}`}
           onSubmit={onSubmit}
-          action="POST"
-          name="Portfolio"
+          name="portofolio"
           data-netlify="true"
+          data-netlify-honeypot="bot-field"
         >
+          <input type="hidden" name="form-name" value="portofolio" />
           {showAlert && (
             <div
               className={`alert ${alert} alert-dismissible fade show`}
@@ -64,9 +65,7 @@ const Contact = () => {
                   name="name"
                   onChange={handleChange}
                   value={values.name}
-                  onBlur={onBlur}
                   className="form-control"
-                  placeholder="Enter full name here..."
                 />
                 <div id="emailAlert"></div>
                 <label>Email:</label>
@@ -76,9 +75,7 @@ const Contact = () => {
                   name="email"
                   onChange={handleChange}
                   value={values.email}
-                  onBlur={onBlur}
                   className="form-control"
-                  placeholder="Enter email address here..."
                 />
                 <div id="phoneAlert"></div>
                 <label>Phone:</label>
@@ -86,8 +83,10 @@ const Contact = () => {
                   id="phone"
                   type="tel"
                   name="phone"
+                  onChange={handleChange}
+                  value={values.phone}
                   className="form-control"
-                  placeholder="Enter phone number here..."
+                  placeholder="(Optional)"
                 />
               </div>
               <div className="col-md-6">
@@ -100,7 +99,6 @@ const Contact = () => {
                   className="form-control"
                   onChange={handleChange}
                   value={values.message}
-                  onBlur={onBlur}
                   style={{ height: "84.5%" }}
                 ></textarea>
               </div>

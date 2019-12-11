@@ -38,6 +38,11 @@ const TopNav = () => {
               <i className="fab fa-github"></i>
             </a>
           </li>
+          <li className="nav-item">
+            <a className="nav-link" href="https://github.com/azmolmiah">
+              <i className="fas fa-file-alt"></i>
+            </a>
+          </li>
         </ul>
       </div>
     </nav>

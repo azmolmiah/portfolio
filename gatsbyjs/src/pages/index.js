@@ -2,7 +2,7 @@ import React, { Fragment } from "react"
 
 import Nav from "../components/nav"
 import Header from "../components/header/header"
-import FeatureProjects from "../components/projects/featuredProjects"
+import FeaturedProjects from "../components/projects/FeaturedProjects"
 import Contact from "../components/contact/contact"
 import Footer from "../components/footer/footer"
 import Head from "../components/head"
@@ -15,7 +15,7 @@ export default () => (
     <Head />
     <Nav />
     <Header />
-    <FeatureProjects />
+    <FeaturedProjects />
     <Contact />
     <Footer />
   </Fragment>
