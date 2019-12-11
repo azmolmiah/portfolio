@@ -52,13 +52,13 @@ const SideNav = () => {
           </Link>
         </li>
         {/* <li><a href="#">Blog</a></li>  */}
-        <li className="mb-2">
+        <li className="mb-5">
           <Link to="/#contact">
             <h6 className="mr-2 mb-1 float-left font-weight-light">03</h6>
             <h2 className="font-weight-light">Contact</h2>
           </Link>
         </li>
-        <div className="social-media mt-4">
+        <div className="social-media">
           {/* <a href=""><i className="fab fa-youtube-square fa-2x"></i></a>  */}
           <a href="https://www.linkedin.com/in/azmol-miah-bb13b3164/">
             <i className="fab fa-linkedin fa-2x mr-4"></i>
