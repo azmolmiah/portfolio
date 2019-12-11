@@ -42,20 +42,20 @@ const SideNav = () => {
         <li className="mb-1">
           <Link to="/#header">
             <h6 className=" mr-2 mb-1 float-left font-weight-light">01</h6>
-            <h3 className="font-weight-light">Home</h3>
+            <h2 className="font-weight-light">Home</h2>
           </Link>
         </li>
         <li className="mb-1">
           <Link to="/#projects">
             <h6 className=" mr-2 mb-1 float-left font-weight-light">02</h6>
-            <h3 className="font-weight-light">Projects</h3>
+            <h2 className="font-weight-light">Projects</h2>
           </Link>
         </li>
         {/* <li><a href="#">Blog</a></li>  */}
         <li className="mb-2">
           <Link to="/#contact">
             <h6 className="mr-2 mb-1 float-left font-weight-light">03</h6>
-            <h3 className="font-weight-light">Contact</h3>
+            <h2 className="font-weight-light">Contact</h2>
           </Link>
         </li>
         <div className="social-media mt-4">

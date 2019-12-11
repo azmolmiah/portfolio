@@ -47,7 +47,7 @@ const FeaturedProjects = () => {
         <div className="row">
           {data.allContentfulFeatureProjects.edges.map((edge, index) => (
             <div
-              className="col-sm-4 mb-4"
+              className="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4"
               key={edge.node.id}
               data-sal="fade"
               data-sal-delay={`${index + 1}00`}
@@ -56,12 +56,15 @@ const FeaturedProjects = () => {
             >
               <div className="card shadow">
                 <div className="card-body">
-                  <img
-                    className="card-img-top mb-3"
-                    src={edge.node.image.file.url}
-                    alt="Card cap"
-                  />
-                  <h5>{edge.node.title}</h5>
+                  <div className="shadow">
+                    <img
+                      className="card-img-top mb-3"
+                      src={edge.node.image.file.url}
+                      alt="Card cap"
+                    />
+                  </div>
+
+                  <h5 className="mt-3">{edge.node.title}</h5>
                   <p className="card-text">{edge.node.excerpt}</p>
                   <div className="row no-gutters">
                     <div className="col">

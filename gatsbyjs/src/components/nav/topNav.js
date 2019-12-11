@@ -3,7 +3,7 @@ import { Link } from "gatsby"
 
 const TopNav = () => {
   return (
-    <nav className="desktop-nav navbar navbar-expand-md fixed-top navbar-dark bg-dark">
+    <nav className="desktop-nav navbar navbar-expand-md fixed-top navbar-dark bg-dark shadow">
       <div className="container">
         <Link className="navbar-brand" to="/">
           AZMOL MIAH
