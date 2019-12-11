@@ -13,7 +13,6 @@ const SideNav = () => {
     if (!sideNav) {
       setSideNav(true)
       setWidth("15rem")
-      setPadding("3rem")
       setLineOne(sideNavStyles.lineOne)
       setLineTwo(sideNavStyles.lineTwo)
       setLineThree(sideNavStyles.lineThree)
@@ -21,7 +20,6 @@ const SideNav = () => {
     } else {
       setSideNav(false)
       setWidth("0")
-      setPadding("0")
       setLineOne(sideNavStyles.btnLine)
       setLineTwo(sideNavStyles.btnLine)
       setLineThree(sideNavStyles.btnLine)
@@ -35,30 +33,29 @@ const SideNav = () => {
         <div className={lineTwo}></div>
         <div className={lineThree}></div>
       </div>
-      <div
-        className={sideNavStyles.sideNav}
-        style={{ width: width, paddingLeft: padding }}
-      >
-        <li className="mb-1">
-          <Link to="/#header">
-            <h6 className=" mr-2 mb-1 float-left font-weight-light">01</h6>
-            <h2 className="font-weight-light">Home</h2>
-          </Link>
-        </li>
-        <li className="mb-1">
-          <Link to="/#projects">
-            <h6 className=" mr-2 mb-1 float-left font-weight-light">02</h6>
-            <h2 className="font-weight-light">Projects</h2>
-          </Link>
-        </li>
-        {/* <li><a href="#">Blog</a></li>  */}
-        <li className="mb-5">
-          <Link to="/#contact">
-            <h6 className="mr-2 mb-1 float-left font-weight-light">03</h6>
-            <h2 className="font-weight-light">Contact</h2>
-          </Link>
-        </li>
-        <div className="social-media">
+      <div className={sideNavStyles.sideNav} style={{ width: width }}>
+        <div className="ml-4">
+          <li className="mb-1">
+            <Link to="/#header">
+              <h6 className=" mr-2 mb-1 float-left font-weight-light">01</h6>
+              <h2 className="font-weight-light">Home</h2>
+            </Link>
+          </li>
+          <li className="mb-1">
+            <Link to="/#projects">
+              <h6 className=" mr-2 mb-1 float-left font-weight-light">02</h6>
+              <h2 className="font-weight-light">Projects</h2>
+            </Link>
+          </li>
+          {/* <li><a href="#">Blog</a></li>  */}
+          <li className="mb-5">
+            <Link to="/#contact">
+              <h6 className="mr-2 mb-1 float-left font-weight-light">03</h6>
+              <h2 className="font-weight-light">Contact</h2>
+            </Link>
+          </li>
+        </div>
+        <div className="ml-5">
           {/* <a href=""><i className="fab fa-youtube-square fa-2x"></i></a>  */}
           <a href="https://www.linkedin.com/in/azmol-miah-bb13b3164/">
             <i className="fab fa-linkedin fa-2x mr-4"></i>
