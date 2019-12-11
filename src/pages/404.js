@@ -4,9 +4,9 @@ import { Link } from "gatsby"
 const NotFound = () => {
   return (
     <div className="container">
-      <h1>Page not found</h1>
+      <h1>This page is not found or does not exist</h1>
       <p>
-        <Link to="/">Return Home</Link>
+        <Link to="/">Return to the home page...</Link>
       </p>
     </div>
   )
