@@ -23,7 +23,7 @@ const ProjectsModal = ({ show, handleClose, id }) => {
     <div>
       {data.allContentfulFeatureProjects.edges
         .filter(edge => edge.node.id === id)
-        .map((edge, index) => (
+        .map((edges, index) => (
           <Modal
             show={show}
             onHide={handleClose}
@@ -31,13 +31,17 @@ const ProjectsModal = ({ show, handleClose, id }) => {
             style={{ overflowY: "scroll" }}
           >
             <Modal.Header closeButton>
-              <Modal.Title>{edge.node.title}</Modal.Title>
+              <Modal.Title>{edges.node.title}</Modal.Title>
             </Modal.Header>
             <Modal.Body>
-              {documentToReactComponents(edge.node.body.json)}
+              <>{documentToReactComponents(edges.node.body.json)}</>
             </Modal.Body>
 
-            <div onClick={handleClose} className="btn my-button shadow">
+            <div
+              onClick={handleClose}
+              className="btn my-button shadow"
+              style={{ position: "relative", bottom: -30, zIndex: 1 }}
+            >
               Close
             </div>
           </Modal>

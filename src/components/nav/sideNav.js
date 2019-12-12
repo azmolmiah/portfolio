@@ -5,7 +5,6 @@ import { Link } from "gatsby"
 const SideNav = () => {
   const [sideNav, setSideNav] = useState(false)
   const [width, setWidth] = useState("0")
-  const [padding, setPadding] = useState("0")
   const [lineOne, setLineOne] = useState(sideNavStyles.btnLine)
   const [lineTwo, setLineTwo] = useState(sideNavStyles.btnLine)
   const [lineThree, setLineThree] = useState(sideNavStyles.btnLine)

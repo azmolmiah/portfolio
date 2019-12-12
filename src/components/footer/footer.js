@@ -4,7 +4,7 @@ import footerStyles from "./footer.module.scss"
 
 const Footer = () => {
   return (
-    <section id="footer" className={footerStyles.footer}>
+    <section className={footerStyles.footer}>
       <div className="container text-center">
         <h3 className={footerStyles.title}>AZMOL MIAH</h3>
         {/* <a to=""><i className="fab fa-youtube-square fa-2x"></i></a>  */}
@@ -32,7 +32,7 @@ const Footer = () => {
             Contact
           </Link>
         </div>
-        <p>&copy; 2019 by Azmol with Gatsbyjs &amp; Contentful</p>
+        <p>&copy; 2019 by Azmol with Netlify, Gatsbyjs &amp; Contentful</p>
       </div>
     </section>
   )
