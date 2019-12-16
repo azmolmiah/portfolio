@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,SAAS,CAAC;EACR,OAAO,EAAE,MAAM;CAChB;;AAED,AAAA,MAAM,CAAC;EACL,SAAS,EAAE,MAAM;EACjB,WAAW,EAAE,GAAG;CACjB;;AAED,AAAA,OAAO,CAAC;EACN,KAAK,EAAE,IAAI;CACZ",
+    "sources": [
+        "featuredProjects.module.scss"
+    ],
+    "names": [],
+    "file": "featuredProjects.module.css"
+}

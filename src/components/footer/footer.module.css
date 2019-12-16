@@ -1,0 +1,22 @@
+.footer {
+  border-top: 0.5px solid #ff6363;
+  background: #ff3838;
+  padding: 2.5rem 0;
+  color: #fff !important;
+}
+
+.footer a {
+  color: #dfdfdf;
+}
+
+.title {
+  margin-bottom: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.5rem;
+}
+
+.link:hover {
+  color: #fff;
+  text-decoration: none;
+}
+/*# sourceMappingURL=footer.module.css.map */

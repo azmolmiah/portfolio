@@ -8,19 +8,21 @@ html {
 }
 
 .btn:hover {
-  box-shadow: 0 0 0 0.2rem rgb(214, 214, 214);
+  -webkit-box-shadow: 0 0 0 0.2rem #d6d6d6;
+          box-shadow: 0 0 0 0.2rem #d6d6d6;
 }
 
 .form-control:focus {
-  box-shadow: 0 0 0 0.2rem rgb(200, 200, 200);
+  -webkit-box-shadow: 0 0 0 0.2rem #c8c8c8;
+          box-shadow: 0 0 0 0.2rem #c8c8c8;
   border-color: #cccccc;
 }
 
-h1#{&} {
+h1 {
   font-family: "Noto Sans", sans-serif;
 }
 
-h3#{&} .navbar-brand {
+h3 .navbar-brand {
   font-family: "Raleway", sans-serif;
   color: #43464b;
 }
@@ -42,3 +44,4 @@ h3#{&} .navbar-brand {
   border-radius: 0;
   background: #fff;
 }
+/*# sourceMappingURL=index.css.map */

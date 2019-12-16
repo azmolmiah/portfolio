@@ -47,10 +47,16 @@ const SideNav = () => {
             </Link>
           </li>
           {/* <li><a href="#">Blog</a></li>  */}
-          <li className="mb-5">
+          <li className="mb-1">
             <Link to="/#contact">
               <h6 className="mr-2 mb-1 float-left font-weight-light">03</h6>
               <h2 className="font-weight-light">Contact</h2>
+            </Link>
+          </li>
+          <li className="mb-5">
+            <Link to="/blog">
+              <h6 className="mr-2 mb-1 float-left font-weight-light">04</h6>
+              <h2 className="font-weight-light">Blog</h2>
             </Link>
           </li>
         </div>

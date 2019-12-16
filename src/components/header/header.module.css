@@ -1,0 +1,14 @@
+.header {
+  background: #e2e2e2 fixed;
+  padding: 5rem 0;
+}
+
+.title {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+.skills {
+  color: #6e6e6e;
+}
+/*# sourceMappingURL=header.module.css.map */

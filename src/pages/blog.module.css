@@ -1,0 +1,12 @@
+.blogpage {
+  padding: 5rem 0;
+}
+
+.blogpage a {
+  color: #353535;
+}
+
+.blogpage a:hover {
+  color: #535353;
+}
+/*# sourceMappingURL=blog.module.css.map */

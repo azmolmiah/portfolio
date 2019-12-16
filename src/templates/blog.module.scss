@@ -1,0 +1,9 @@
+.blogpost {
+  padding: 5rem 0;
+  a {
+    color: #353535;
+    &:hover {
+      color: rgb(83, 83, 83);
+    }
+  }
+}
