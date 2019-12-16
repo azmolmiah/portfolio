@@ -26,6 +26,11 @@ const TopNav = () => {
             </Link>
           </li>
           <li className="nav-item">
+            <Link className="nav-link" to="/blog" activeClassName="active">
+              Blog
+            </Link>
+          </li>
+          <li className="nav-item">
             <a
               className="nav-link"
               href="https://www.linkedin.com/in/azmol-miah-bb13b3164/"
