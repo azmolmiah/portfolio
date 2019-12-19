@@ -24,7 +24,7 @@ const Header = () => {
     }
   `)
   return (
-    <section id="header" className={headerStyles.header}>
+    <section id="home" className={headerStyles.header}>
       <div
         className="container text-center"
         data-sal="slide-down"

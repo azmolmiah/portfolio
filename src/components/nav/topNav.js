@@ -11,12 +11,19 @@ const TopNav = () => {
 
         <ul className="navbar-nav ml-auto">
           <li className="nav-item">
-            <Link className="nav-link" to="/#header" activeClassName="active">
+            <Link className="nav-link" to="/#home" activeClassName="active">
               Home
             </Link>
           </li>
           <li className="nav-item">
-            <Link className="nav-link" to="/#projects" activeClassName="active">
+            <Link
+              className="nav-link"
+              to="/#projects"
+              activeClassName="active"
+              onClick={() => {
+                return false
+              }}
+            >
               Projects
             </Link>
           </li>

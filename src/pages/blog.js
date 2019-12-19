@@ -21,7 +21,7 @@ const Blog = () => {
     <Layout>
       <div className={BlogPageStyles.blogpage}>
         <div className="container">
-          <h1 className="font-weight-bold mb-4">Self Taught Development</h1>
+          <h1 className="font-weight-bold mb-4">Web Development</h1>
           <ul className="list-group list-group-flush">
             <div className="row">
               {data.allContentfulPosts.edges.map((edge, index) => (

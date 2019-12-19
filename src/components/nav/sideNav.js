@@ -35,7 +35,7 @@ const SideNav = () => {
       <div className={sideNavStyles.sideNav} style={{ width: width }}>
         <div className="ml-4">
           <li className="mb-1">
-            <Link to="/#header">
+            <Link to="/#home">
               <h6 className=" mr-2 mb-1 float-left font-weight-light">01</h6>
               <h2 className="font-weight-light">Home</h2>
             </Link>
