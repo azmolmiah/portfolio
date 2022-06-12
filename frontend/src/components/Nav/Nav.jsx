@@ -8,11 +8,6 @@ import "./Nav.scss";
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
 
-  const variants = {
-    visible: { x: [300, 0] },
-    hidden: { x: [-300, 0] },
-  };
-
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
@@ -27,18 +22,13 @@ const Nav = () => {
         ))}
       </ul>
 
-      <div
-        className="app__navbar-menu"
-        style={{ transition: "all 0.3s ease-" }}
-      >
+      <div className="app__navbar-menu">
         <HiMenuAlt4 onClick={() => setToggle(true)} />
 
         {toggle && (
           <motion.div
-            // whileInView={{ x: [300, 0] }}
-            animate={toggle ? "visible" : "hidden"}
-            variants={variants}
-            transition={{ duration: 1.85, ease: "easeOut" }}
+            whileInView={{ x: [300, 0] }}
+            transition={{ duration: 0.85, ease: "easeOut" }}
           >
             <HiX onClick={() => setToggle(false)} />
             <ul>

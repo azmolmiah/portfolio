@@ -1,0 +1,86 @@
+    .app__header-text {
+    text-transform: uppercase;
+    flex-grow: 1;
+    h1 {
+        font-size: 4rem;
+        margin-bottom: 1rem;
+    }
+
+    @media screen and (max-width: 550px) {
+        h1 {
+            font-size: 2rem !important;
+            margin-bottom: 0.7rem;
+        }
+        p {
+            font-size: 0.55rem !important;
+        }
+      }
+
+      @media screen and (max-width: 750px) {
+        h1 {
+            font-size: 3rem;
+            margin-bottom: 0.7rem;
+        }
+        p {
+            font-size: 0.8rem;
+        }
+      }
+}
+
+.app__header-scroll-content {
+    position: absolute;
+    bottom: 0;
+    margin: 0 auto 2.5rem auto;
+
+    .app__header-scroll {
+        position: relative;
+        width: 1px;
+        height: 70px;
+        background-color: #e5e5e5;
+        overflow: hidden;
+        margin: 0 auto 0.5rem auto;
+    
+        span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        background-color: var(--secondary-color);
+        width: 100%;
+        height: 100%;
+        transform: translateY(-100%);
+        animation: scrollHelperFerro 2s infinite ease-in-out;
+        }
+    
+        @keyframes scrollHelperFerro{
+            0% {
+                  transform: translateY(-100%);
+          
+            }
+             100% {
+                  transform: translateY(100%);
+          
+            }
+          }
+    }
+
+    a{
+        text-decoration: none;
+        &:hover {
+            color: var(--secondary-color);
+        }
+    }
+
+    div {
+        width: 100%;
+        height: 1px;
+        border: transparent;
+        margin-bottom: 5px;
+        transition: all 0.3s ease-in-out;
+    }
+
+    &:hover {
+        div {
+            background: var(--secondary-color);
+        }
+    }
+}

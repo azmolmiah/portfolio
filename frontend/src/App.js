@@ -10,7 +10,7 @@ const App = () => {
       <Nav />
       <Header />
       <Projects />
-      <Contact />
+      {/* <Contact /> */}
     </div>
   );
 };
