@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { AiFillEye, AiFillGithub } from "react-icons/ai";
+// import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 import { AppWrap } from "../../wrapper";
@@ -11,6 +11,8 @@ const Projects = () => {
   const [animateCard, setAnimateCard] = useState({ y: 0, opacity: 1 });
   const [projects, setProjects] = useState([]);
   const [filterProjects, setFilterProjects] = useState([]);
+
+  console.log(projects);
 
   useEffect(() => {
     const query = '*[_type == "projects"]';
@@ -40,17 +42,19 @@ const Projects = () => {
     <div className="app__projects">
       <h2 className="head-text">Projects</h2>
       <div className="app__projects-filter">
-        {["Javascript", "React", "MERN", "All"].map((item, index) => (
-          <div
-            key={index}
-            onClick={() => handleWorkFilter(item)}
-            className={`app__projects-filter-item app__flex p-text ${
-              activeFilter === item ? "item-active" : ""
-            }`}
-          >
-            {item}
-          </div>
-        ))}
+        {["JAM Stack", "Full Stack", "Frontend", "Backend", "All"].map(
+          (item, index) => (
+            <div
+              key={index}
+              onClick={() => handleWorkFilter(item)}
+              className={`app__projects-filter-item app__flex p-text ${
+                activeFilter === item ? "item-active" : ""
+              }`}
+            >
+              {item}
+            </div>
+          )
+        )}
       </div>
       <motion.div
         animate={animateCard}
@@ -79,7 +83,8 @@ const Projects = () => {
                     }}
                     className="app__flex"
                   >
-                    <AiFillEye />
+                    {/* <AiFillEye /> */}
+                    <i class="fa-solid fa-eye"></i>
                   </motion.div>
                 </a>
                 <a href={project.codeLink} target="_blank" rel="noreferrer">
@@ -91,7 +96,8 @@ const Projects = () => {
                     }}
                     className="app__flex"
                   >
-                    <AiFillGithub />
+                    {/* <AiFillGithub /> */}
+                    <i class="fa-brands fa-github"></i>
                   </motion.div>
                 </a>
               </motion.div>

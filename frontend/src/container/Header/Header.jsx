@@ -15,6 +15,19 @@ const Header = () => {
   return (
     <div className="app__header app__flex">
       <div className="app__header-text">
+        {headerInfo.map((header) => {
+          return (
+            <ul className="app__flex">
+              {header.icons.map((icon) => {
+                return (
+                  <li className="app__header-icon">
+                    <i className={icon}></i>
+                  </li>
+                );
+              })}
+            </ul>
+          );
+        })}
         <h1 className="head-text">
           <motion.div
             whileInView={{ x: [-100, 0], opacity: [0, 1] }}
