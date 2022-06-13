@@ -8,6 +8,8 @@ import "./Nav.scss";
 const Nav = () => {
   const [toggle, setToggle] = useState(false);
 
+  // Add an active function here like the active filter from projects component
+
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
