@@ -83,7 +83,6 @@ const Projects = () => {
                     }}
                     className="app__flex"
                   >
-                    {/* <AiFillEye /> */}
                     <i class="fa-solid fa-eye"></i>
                   </motion.div>
                 </a>
@@ -96,7 +95,6 @@ const Projects = () => {
                     }}
                     className="app__flex"
                   >
-                    {/* <AiFillGithub /> */}
                     <i class="fa-brands fa-github"></i>
                   </motion.div>
                 </a>

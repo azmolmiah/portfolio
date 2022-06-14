@@ -1,11 +1,10 @@
-import React from 'react'
+import React from "react";
 
-import './Contact.scss'
+import { AppWrap } from "../../wrapper";
+import "./Contact.scss";
 
 const Contact = () => {
-  return (
-    <div>Contact</div>
-  )
-}
+  return <div>Contact</div>;
+};
 
-export default Contact
+export default AppWrap(Contact, "contact");
