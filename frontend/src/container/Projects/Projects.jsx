@@ -12,8 +12,6 @@ const Projects = () => {
   const [projects, setProjects] = useState([]);
   const [filterProjects, setFilterProjects] = useState([]);
 
-  console.log(projects);
-
   useEffect(() => {
     const query = '*[_type == "projects"]';
     client.fetch(query).then((data) => {
@@ -83,7 +81,7 @@ const Projects = () => {
                     }}
                     className="app__flex"
                   >
-                    <i class="fa-solid fa-eye"></i>
+                    <i className="fa-solid fa-eye"></i>
                   </motion.div>
                 </a>
                 <a href={project.codeLink} target="_blank" rel="noreferrer">
@@ -95,7 +93,7 @@ const Projects = () => {
                     }}
                     className="app__flex"
                   >
-                    <i class="fa-brands fa-github"></i>
+                    <i className="fa-brands fa-github"></i>
                   </motion.div>
                 </a>
               </motion.div>

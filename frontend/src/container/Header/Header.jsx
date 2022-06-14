@@ -15,12 +15,12 @@ const Header = () => {
   return (
     <div className="app__header app__flex">
       <div className="app__header-text">
-        {headerInfo.map((header) => {
+        {headerInfo.map((header, index) => {
           return (
-            <ul className="app__flex">
-              {header.icons.map((icon) => {
+            <ul className="app__flex" key={index}>
+              {header.icons.map((icon, index) => {
                 return (
-                  <li className="app__header-icon">
+                  <li className="app__header-icon" key={index}>
                     <i className={icon}></i>
                   </li>
                 );

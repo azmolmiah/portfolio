@@ -1,0 +1,61 @@
+.app__contact {
+    flex: 1;
+    width: 100%;
+    flex-direction: column;
+}
+
+.app__contact-form {
+    width: 60%;
+    flex-direction: column;
+    margin: 1rem 2rem;
+
+    .app__contact-input {
+        width: 100%;
+        margin: 0.75rem 0;
+        border-bottom: 0.75px solid var(--secondary-color);
+        transition: all 0.3s ease-in-out;
+        input {
+            width: 100%;
+            padding: 0.95rem;
+            border: none;
+            background: none;
+            font-family: var(--font-base);
+            outline: none;
+        }
+    }
+    
+    .app__contact-textarea {
+        width: 100%;
+        margin: 0.75rem 0;
+        cursor: pointer;
+        border: 0.75px solid var(--secondary-color);
+        transition: all 0.3s ease-in-out;
+        textarea {
+            width: 100%;
+            padding: 0.95rem;
+            border: none;
+            background: none;
+            font-family: var(--font-base);
+            outline: none;
+        }
+    }
+
+    button {
+        border: 0.75px solid var(--secondary-color);
+        background: none;
+        width: 100%;
+        text-align: center;
+        font-weight: 500;
+        color: var(--secondary-color);
+        outline: none;
+        font-family: var(--font-base);
+        padding: 1rem 0;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            color: var(--white-color);
+            background: var(--secondary-color);
+        }
+    }
+}
