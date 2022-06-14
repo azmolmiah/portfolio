@@ -30,64 +30,66 @@ const Contact = () => {
       message: message,
     };
 
-    client.create(contact).then(() => {
-      setloading(false);
-      setisFormSubmitted(true);
-    });
+    client
+      .create(contact)
+      .then(() => {
+        setloading(false);
+        setisFormSubmitted(true);
+      })
+      .catch((error) => console.error(error));
 
+    setTimeout(() => setisFormSubmitted(false), 3000);
     e.preventDefault();
   };
 
   return (
-    <>
-      <div className="app__contact app__flex">
-        <h2 className="head-text">Contact</h2>
+    <div className="app__contact app__flex">
+      <h2 className="head-text">Contact</h2>
 
-        {!isFormSubmitted ? (
-          <form action="" className="app__contact-form app__flex">
-            <div className="app__flex app__contact-input">
-              <input
-                className="p-text"
-                placeholder="Your Name"
-                type="text"
-                name="name"
-                value={name}
-                onChange={handleChangeInput}
-              />
-            </div>
-            <div className="app__flex app__contact-input">
-              <input
-                className="p-text"
-                placeholder="Your Email"
-                type="email"
-                name="email"
-                value={email}
-                onChange={handleChangeInput}
-              />
-            </div>
-            <div className="app__contact-textarea">
-              <textarea
-                className="p-text"
-                placeholder="Your Message"
-                value={message}
-                name="message"
-                onChange={handleChangeInput}
-                id=""
-                cols="30"
-                rows="10"
-              ></textarea>
-            </div>
-            <button type="submit" className="p-text" onClick={handleSubmit}>
-              {loading ? "Sending" : "Send Message"}
-            </button>
-          </form>
-        ) : (
-          <div>
-            <p className="p-text">Thank you for getting in touch!</p>
+      {!isFormSubmitted ? (
+        <form action="" className="app__contact-form app__flex">
+          <div className="app__flex app__contact-input">
+            <input
+              className="p-text"
+              placeholder="Your Name"
+              type="text"
+              name="name"
+              value={name}
+              onChange={handleChangeInput}
+            />
           </div>
-        )}
-      </div>
-    </>
+          <div className="app__flex app__contact-input">
+            <input
+              className="p-text"
+              placeholder="Your Email"
+              type="email"
+              name="email"
+              value={email}
+              onChange={handleChangeInput}
+            />
+          </div>
+          <div className="app__contact-textarea">
+            <textarea
+              className="p-text"
+              placeholder="Your Message"
+              value={message}
+              name="message"
+              onChange={handleChangeInput}
+              id=""
+              cols="30"
+              rows="10"
+            ></textarea>
+          </div>
+          <button type="submit" className="p-text" onClick={handleSubmit}>
+            {loading ? "Sending" : "Send Message"}
+          </button>
+        </form>
+      ) : (
+        <div>
+          <p className="p-text">Thank you for getting in touch!</p>
+        </div>
+      )}
+    </div>
   );
 };
 

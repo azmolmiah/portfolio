@@ -14,10 +14,13 @@ const Projects = () => {
 
   useEffect(() => {
     const query = '*[_type == "projects"]';
-    client.fetch(query).then((data) => {
-      setProjects(data);
-      setFilterProjects(data);
-    });
+    client
+      .fetch(query)
+      .then((data) => {
+        setProjects(data);
+        setFilterProjects(data);
+      })
+      .catch((error) => console.error(error));
   }, []);
 
   const handleWorkFilter = (item) => {
