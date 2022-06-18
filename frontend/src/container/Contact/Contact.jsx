@@ -10,7 +10,13 @@ const Contact = () => {
     email: "",
     message: "",
   });
-  const [isFormSubmitted, setisFormSubmitted] = useState(false);
+  const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+  const [alert, setAlert] = useState({
+    name: "",
+    email: "",
+    message: "",
+  });
+  const [isFormValid, setIsFormValid] = useState(true);
   const [loading, setloading] = useState(false);
 
   const { name, email, message } = formData;
@@ -18,11 +24,10 @@ const Contact = () => {
   const handleChangeInput = (e) => {
     const { name, value } = e.target;
     setFormData({ ...formData, [name]: value });
+    setIsFormValid(true);
   };
 
   const handleSubmit = (e) => {
-    setloading(true);
-
     const contact = {
       _type: "contact",
       name: name,
@@ -30,15 +35,44 @@ const Contact = () => {
       message: message,
     };
 
-    client
-      .create(contact)
-      .then(() => {
-        setloading(false);
-        setisFormSubmitted(true);
-      })
-      .catch((error) => console.error(error));
+    if (name === "" || !name.match(/^[a-zA-Z ]+$/)) {
+      setAlert({
+        ...alert,
+        name: "Please enter a valid name (Only letters, -, and ' are acceptable)",
+      });
+      setIsFormValid(false);
+    } else if (
+      email === "" ||
+      !email.match(
+        /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+      )
+    ) {
+      setAlert({
+        ...alert,
+        email:
+          "Please enter a valid email address and remember to add the domain name (Only letters, numbers, @, ., _, and - are acceptable)",
+      });
+      setIsFormValid(false);
+    } else if (message === "") {
+      setAlert({ ...alert, message: "Please enter a message" });
+      setIsFormValid(false);
+    } else {
+      setloading(true);
 
-    setTimeout(() => setisFormSubmitted(false), 3000);
+      client
+        .create(contact)
+        .then(() => {
+          setloading(false);
+          setIsFormSubmitted(true);
+        })
+        .catch((error) => console.error(error));
+
+      setTimeout(() => {
+        setIsFormSubmitted(false);
+        setFormData({ ...formData, name: "", email: "", message: "" });
+      }, 3000);
+    }
+
     e.preventDefault();
   };
 
@@ -48,6 +82,9 @@ const Contact = () => {
 
       {!isFormSubmitted ? (
         <form action="" className="app__contact-form app__flex">
+          <label style={{ display: !isFormValid ? "block" : "none" }}>
+            <small className="alert">{alert.name}</small>
+          </label>
           <div className="app__flex app__contact-input">
             <input
               className="p-text"
@@ -56,8 +93,12 @@ const Contact = () => {
               name="name"
               value={name}
               onChange={handleChangeInput}
+              required
             />
           </div>
+          <label style={{ display: !isFormValid ? "block" : "none" }}>
+            <small className="alert">{alert.email}</small>
+          </label>
           <div className="app__flex app__contact-input">
             <input
               className="p-text"
@@ -66,8 +107,12 @@ const Contact = () => {
               name="email"
               value={email}
               onChange={handleChangeInput}
+              required
             />
           </div>
+          <label style={{ display: !isFormValid ? "block" : "none" }}>
+            <small className="alert">{alert.message}</small>
+          </label>
           <div className="app__contact-textarea">
             <textarea
               className="p-text"
@@ -75,9 +120,9 @@ const Contact = () => {
               value={message}
               name="message"
               onChange={handleChangeInput}
-              id=""
               cols="30"
               rows="10"
+              required
             ></textarea>
           </div>
           <button type="submit" className="p-text" onClick={handleSubmit}>
