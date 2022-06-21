@@ -1,5 +1,5 @@
 .app {
-    background-color: var(--primary-color);
+    // background-color: var(--primary-color);
     font-family: var(--font-base);
   }
   
@@ -189,4 +189,20 @@
     .copyright {
       padding: 2rem;
     }
+  }
+
+  .components{
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-align: center;
+    z-index: 20;
+  }
+
+  canvas {
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
   }

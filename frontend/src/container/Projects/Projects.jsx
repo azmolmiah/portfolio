@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-// import { AiFillEye, AiFillGithub } from "react-icons/ai";
 import { motion } from "framer-motion";
 
 import { AppWrap } from "../../wrapper";
@@ -41,7 +40,10 @@ const Projects = () => {
 
   return (
     <div className="app__projects">
-      <h2 className="head-text">Projects</h2>
+      <div>
+        <h2 className="head-text">Projects</h2>
+      </div>
+
       <div className="app__projects-filter">
         {["JAM Stack", "Full Stack", "Frontend", "Backend", "All"].map(
           (item, index) => (

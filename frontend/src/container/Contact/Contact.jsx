@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { motion } from "framer-motion";
 
 import { AppWrap } from "../../wrapper";
 import { client } from "../../client";
@@ -78,7 +79,9 @@ const Contact = () => {
 
   return (
     <div className="app__contact app__flex">
-      <h2 className="head-text">Contact</h2>
+      <div>
+        <h2 className="head-text">Contact</h2>
+      </div>
 
       {!isFormSubmitted ? (
         <form action="" className="app__contact-form app__flex">
