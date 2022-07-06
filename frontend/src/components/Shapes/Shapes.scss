@@ -1,0 +1,28 @@
+.app__shapes-container{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: -1;
+
+    .fa-react {
+        width: auto;
+        height: 250px;
+        color: rgb(146, 146, 146);
+    }
+
+    .app__mountain {
+        img{
+            width: 100%;
+            height: 500px !important;
+            box-shadow: 0 0 40px 0 white inset;
+        }
+    }
+
+    // .app__dark-clouds {
+    //     position: relative;
+    //     top: 0;
+    //     z-index: -3;
+    // }
+}
+

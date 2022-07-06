@@ -39,7 +39,7 @@ const Projects = () => {
   };
 
   return (
-    <div className="app__projects">
+    <motion.div className="app__projects">
       <div>
         <h2 className="head-text">Projects</h2>
       </div>
@@ -116,7 +116,7 @@ const Projects = () => {
           </div>
         ))}
       </motion.div>
-    </div>
+    </motion.div>
   );
 };
 
