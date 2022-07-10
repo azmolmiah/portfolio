@@ -8,7 +8,9 @@ const Shapes = () => {
   const { scrollY } = useViewportScroll();
   const y = useTransform(scrollY, [0, 100], [-200, -150]);
   const y1 = useTransform(scrollY, [0, 300], [-270, -320]);
-  const y2 = useTransform(scrollY, [0, 300], [-910, -1250]);
+  const y2 = useTransform(scrollY, [0, 300], [-970, -1280]);
+  const y3 = useTransform(scrollY, [0, 900], [-2050, -2300]);
+  const y4 = useTransform(scrollY, [0, 1200], [-2050, -2700]);
 
   return (
     <motion.div className="app__shapes-container">
@@ -27,11 +29,49 @@ const Shapes = () => {
         animate={{ x: [0, -300] }}
         transition={{
           yoyo: Infinity,
-          duration: 6,
+          duration: 9,
           restSpeed: 6,
         }}
       >
         <img src={images.cloud} alt="cloud" />
+      </motion.div>
+      <motion.div style={{ y: y3 }}>
+        <img
+          src={images.balloon}
+          alt="baloon"
+          style={{ width: "auto", height: "500px" }}
+        />
+      </motion.div>
+      <motion.div style={{ y: y4 }}>
+        <img
+          src={images.balloon}
+          alt="baloon"
+          style={{ width: "auto", height: "200px" }}
+        />
+      </motion.div>
+      <motion.div style={{ y: y3 }}>
+        <img
+          src={images.balloon}
+          alt="baloon"
+          style={{
+            width: "auto",
+            height: "200px",
+            position: "absolute",
+            right: 0,
+          }}
+        />
+      </motion.div>
+      <motion.div style={{ y: y4 }}>
+        <img
+          src={images.balloon}
+          alt="baloon"
+          style={{
+            width: "auto",
+            height: "500px",
+            position: "absolute",
+            right: 0,
+          }}
+        />
       </motion.div>
     </motion.div>
   );
