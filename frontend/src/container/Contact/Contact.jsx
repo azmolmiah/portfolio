@@ -1,6 +1,4 @@
 import React, { useState } from "react";
-import { motion } from "framer-motion";
-
 import { AppWrap } from "../../wrapper";
 import { client } from "../../client";
 import "./Contact.scss";
