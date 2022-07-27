@@ -5,7 +5,7 @@ import cloudDark from "../assets/cloudDark.png";
 import balloon from "../assets/balloon.png";
 import grass from "../assets/grass.png";
 
-export default {
+const images = {
   logo,
   mountain,
   cloud,
@@ -13,3 +13,5 @@ export default {
   balloon,
   grass,
 };
+
+export default images;
