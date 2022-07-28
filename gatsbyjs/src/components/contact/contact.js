@@ -26,10 +26,10 @@ const Contact = () => {
     <section id="contact" className={contactStyles.contact}>
       <div
         className="container "
-        data-sal="slide-down"
-        data-sal-delay="300"
-        data-sal-duration="450"
-        data-sal-easing="ease"
+        // data-sal="slide-down"
+        // data-sal-delay="300"
+        // data-sal-duration="450"
+        // data-sal-easing="ease"
       >
         <h3 className={`text-center mb-5 ${contactStyles.title}`}>
           Contact me with this form
@@ -42,6 +42,7 @@ const Contact = () => {
           data-netlify="true"
           data-netlify-honeypot="bot-field"
         >
+          <label htmlFor="form-name"></label>
           <input type="hidden" name="form-name" value="portofolio" />
           {showAlert && (
             <div
@@ -64,7 +65,7 @@ const Contact = () => {
             <div className="row">
               <div className="col-md-6">
                 <div id="nameAlert"></div>
-                <label>Name:</label>
+                <label htmlFor="name">Name:</label>
                 <input
                   id="name"
                   type="text"
@@ -74,7 +75,7 @@ const Contact = () => {
                   className="form-control"
                 />
                 <div id="emailAlert"></div>
-                <label>Email:</label>
+                <label htmlFor="email">Email:</label>
                 <input
                   id="email"
                   type="email"
@@ -84,7 +85,7 @@ const Contact = () => {
                   className="form-control"
                 />
                 <div id="phoneAlert"></div>
-                <label>Phone:</label>
+                <label htmlFor="phone">Phone:</label>
                 <input
                   id="phone"
                   type="tel"
@@ -97,7 +98,7 @@ const Contact = () => {
               </div>
               <div className="col-md-6">
                 <div id="messageAlert"></div>
-                <label>Message:</label>
+                <label htmlFor="message">Message:</label>
                 <textarea
                   id="message"
                   name="message"

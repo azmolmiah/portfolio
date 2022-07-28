@@ -37,10 +37,10 @@ const FeaturedProjects = () => {
       <div className="container text-center">
         <h3
           className={`mb-5 ${featuredProjectsStyles.title}`}
-          data-sal="fade"
-          data-sal-delay="300"
-          data-sal-duration="300"
-          data-sal-easing="ease"
+          // data-sal="fade"
+          // data-sal-delay="300"
+          // data-sal-duration="300"
+          // data-sal-easing="ease"
         >
           Take a look at my projects
         </h3>
@@ -49,10 +49,10 @@ const FeaturedProjects = () => {
             <div
               className="col-lg-4 col-md-6 col-sm-6 col-xs-12 mb-4"
               key={edge.node.id}
-              data-sal="fade"
-              data-sal-delay={`${index + 1}00`}
-              data-sal-duration={`${index + 1}${index + 1 * 10}0`}
-              data-sal-easing="ease"
+              // data-sal="fade"
+              // data-sal-delay={`${index + 1}00`}
+              // data-sal-duration={`${index + 1}${index + 1 * 10}0`}
+              // data-sal-easing="ease"
             >
               <div className="card shadow">
                 <div className="card-body">

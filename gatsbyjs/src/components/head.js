@@ -5,7 +5,7 @@ const Head = () => {
   return (
     <Helmet>
       <meta charSet="utf-8" />
-      <title>Azmol Miah | Front End Developer</title>
+      <title>Azmol Miah | Web Developer</title>
       <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
