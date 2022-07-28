@@ -1,6 +1,6 @@
-import React from "react"
-import { Link } from "gatsby"
-import footerStyles from "./footer.module.scss"
+import React from "react";
+import { Link } from "gatsby";
+import footerStyles from "./footer.module.scss";
 
 const Footer = () => {
   return (
@@ -32,10 +32,13 @@ const Footer = () => {
             Contact
           </Link>
         </div>
-        <p>&copy; 2019 by Azmol with Gatsbyjs &amp; Contentful</p>
+        <p>
+          &copy; {new Date().getFullYear()} by Azmol with Gatsbyjs &amp;
+          Contentful
+        </p>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
